@@ -15,7 +15,7 @@ const Login = ({ login, isAuthenticated }) => {
   const { email, password } = formData;
   
   const onChange = e => setFormData({ ...formData, [ e.target.name ]: e.target.value });
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
     login(email, password);
   }
@@ -27,8 +27,10 @@ const Login = ({ login, isAuthenticated }) => {
 
   return <Fragment>
       <h1 className="large text-primary">Sign In</h1>
-      <p className="lead"><i className="fas fa-user"></i> Sign Into Your Account</p>
-      <form className="form" onSubmit={e => onSubmit(e)}>
+      <p className="lead">
+        <i className="fas fa-user"></i> Sign Into Your Account
+      </p>
+      <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input
             type="email"
@@ -36,7 +38,7 @@ const Login = ({ login, isAuthenticated }) => {
             name="email"
             required
             value={email}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
         </div>
         <div className="form-group">
@@ -45,7 +47,8 @@ const Login = ({ login, isAuthenticated }) => {
             placeholder="Password"
             name="password"
             value={password}
-            onChange={e => onChange(e)}
+            onChange={onChange}
+            minLength="6"
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Login" />

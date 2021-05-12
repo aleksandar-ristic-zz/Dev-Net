@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addExperience} from '../../actions/profile'
@@ -16,9 +16,15 @@ const AddExperience = ({ addExperience, history }) => {
     description: ''
   });
 
-  const [toDateDisabled, toggleDisabled] = useState(false);
-
-  const { company, title, location, from, to, current, description } = formData;
+  const { 
+    company, 
+    title, 
+    location, 
+    from, 
+    to, 
+    current, 
+    description 
+  } = formData;
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -37,31 +43,37 @@ const AddExperience = ({ addExperience, history }) => {
         positions that you have had in the past
       </p>
       <small>* = required field</small>
-      <form class="form" onSubmit={e => onSubmit(e)} >
+      <form class="form" onSubmit={onSubmit} >
         <div class="form-group">
-          <input type="text" placeholder="* Job Title" name="title" value={title} onChange={e=> onChange(e)} required />
+          <input type="text" placeholder="* Job Title" name="title" value={title} onChange={onChange} required />
         </div>
         <div class="form-group">
-          <input type="text" placeholder="* Company" name="company" value={company} onChange={e=> onChange(e)} required />
+          <input type="text" placeholder="* Company" name="company" value={company} onChange={onChange} required />
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Location" name="location" value={location} onChange={e=> onChange(e)} />
+          <input type="text" placeholder="Location" name="location" value={location} onChange={onChange} />
         </div>
         <div class="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" value={from} onChange={e=> onChange(e)} />
+          <input type="date" name="from" value={from} onChange={onChange} />
         </div>
          <div class="form-group">
-          <p><input type="checkbox" name="current" value={current} 
-            onChange={e=> { 
-              setFormData({...formData, current: !current});
-              toggleDisabled(!toDateDisabled)
-            }} 
-          /> {' '}Current Job</p>
+          <p>
+          <input
+              type="checkbox"
+              name="current"
+              checked={current}
+              value={current}
+              onChange={() => {
+                setFormData({ ...formData, current: !current });
+              }}
+            />{' '}
+            Current Job
+          </p>
         </div>
         <div class="form-group">
           <h4>To Date</h4>
-          <input type="date" name="to" value={to} onChange={e=> onChange(e)} disabled={toDateDisabled ? 'disabled' : ''} />
+          <input type="date" name="to" value={to} onChange={onChange} disabled={current} />
         </div>
         <div class="form-group">
           <textarea
@@ -69,7 +81,7 @@ const AddExperience = ({ addExperience, history }) => {
             cols="30"
             rows="5"
             value={description} 
-            onChange={e=> onChange(e)}
+            onChange={onChange}
             placeholder="Job Description"
           ></textarea>
         </div>

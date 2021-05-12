@@ -1,6 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://sale:0669012919ninja@dev-net.p10bh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://sale123:sale123@MERN.p10bh.mongodb.net/dev-net?retryWrites=true&w=majority",
     "jwtSecret": "mysecrettoken",
     "githubClientId": "962e33556547e17a8376",
-    "githubSecret": "2f7f56edc24be1c9fcc1a1102c75515286efee60"
+    "githubToken": "2f7f56edc24be1c9fcc1a1102c75515286efee60"
 }
