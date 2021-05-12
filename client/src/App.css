@@ -1,10 +1,11 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
-  --light-color: #f4f4f4;
+  --primary-color: #182628;
+  --dark-color: #182628;
+  --light-color: #65ccb8;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --font-color: #f2f2f2;
 }
 
 * {
@@ -17,12 +18,12 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--light-color);
+  color: var(--font-color);
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -129,7 +130,7 @@ img {
 .btn {
   display: inline-block;
   background: var(--light-color);
-  color: #333;
+  color: var(--font-color);
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -169,7 +170,7 @@ img {
 .badge-light,
 .alert-light {
   background: var(--light-color);
-  color: #333;
+  color: var(--font-color);
 }
 
 .btn-dark,
@@ -200,8 +201,6 @@ img {
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
-  color: #333;
   border: #ccc solid 1px;
 }
 
@@ -242,7 +241,7 @@ img {
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
+  color: var(--font-color);
 }
 
 .form input[type='text'],
@@ -323,7 +322,7 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .navbar .welcome span {
@@ -390,7 +389,7 @@ button {
 }
 
 .profile-top .icons a:hover {
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .profile-about {
