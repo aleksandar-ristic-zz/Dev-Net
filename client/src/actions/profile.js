@@ -69,10 +69,10 @@ export const getProfileById = userId => async dispatch => {
 }
 
 //* get Github repos
-export const getGithubRepos = username => async dispatch => {
+export const getGithubRepos = username => async (dispatch) => {
   
   try {
-    const res = await api.get(`/api/profile/github/${username}`);
+    const res = await api.get(`/profile/github/${username}`);
 
     dispatch({
       type: GET_REPOS,
