@@ -51,6 +51,7 @@ then in console enter inside client folder
 ```
 cd client
 npm i
+```
 
 inside config folder you will need to put a default.json
 folder with Github token and client id,
