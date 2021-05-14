@@ -1,11 +1,10 @@
 /* Global Styles */
 :root {
-  --primary-color: #182628;
-  --dark-color: #182628;
-  --light-color: #65ccb8;
+  --primary-color: #116466;
+  --dark-color: #2f4454;
+  --light-color: aliceblue;
   --danger-color: #dc3545;
   --success-color: #28a745;
-  --font-color: #f2f2f2;
 }
 
 * {
@@ -19,11 +18,11 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: var(--light-color);
-  color: var(--font-color);
+  color: var(--dark-color);
 }
 
 a {
-  color: var(--font-color);
+  color: #13a8aa;
   text-decoration: none;
 }
 
@@ -130,7 +129,7 @@ img {
 .btn {
   display: inline-block;
   background: var(--light-color);
-  color: var(--font-color);
+  color: var(--dark-color);
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -170,7 +169,7 @@ img {
 .badge-light,
 .alert-light {
   background: var(--light-color);
-  color: var(--font-color);
+  color: var(--dark-color);
 }
 
 .btn-dark,
@@ -241,7 +240,7 @@ img {
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: var(--font-color);
+  color: var(--dark-color);
 }
 
 .form input[type='text'],
@@ -322,7 +321,7 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--light-color);
+  color: var(--success-color);
 }
 
 .navbar .welcome span {
@@ -389,7 +388,7 @@ button {
 }
 
 .profile-top .icons a:hover {
-  color: var(--light-color);
+  color: var(--success-color);
 }
 
 .profile-about {

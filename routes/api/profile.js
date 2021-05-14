@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require('../../middleware/auth');
 const config = require('config');
 const axios = require('axios');
+const request = require('request')
 const { check, validationResult } = require('express-validator');
 
 const normalize = require('normalize-url');
@@ -262,12 +263,11 @@ router.get('/github/:username', async (req, res) => {
     const uri = encodeURI(
       `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`
     );
-    const headers = {
-      'user-agent': 'node.js',
-      Authorization: `token ${config.get('githubToken')}`
-    };
+    const headers = { 'user-agent': 'node.js' };
 
-    const gitHubResponse = await axios.get(uri, { headers });
+    const authorization = { Authorization: `token ${config.get('githubToken')}` }
+
+    const gitHubResponse = await axios.get(uri, authorization, { headers });
     return res.json(gitHubResponse.data);
   } catch (err) {
     console.error(err.message);
