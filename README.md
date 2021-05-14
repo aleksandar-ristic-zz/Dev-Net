@@ -51,6 +51,11 @@ then in console enter inside client folder
 ```
 cd client
 npm i
+
+inside config folder you will need to put a default.json
+folder with Github token and client id,
+mongoURI, and lastly jsonwebtoken secret
+
 ```
 after that you have a script in package.json,
 first exit client folder
