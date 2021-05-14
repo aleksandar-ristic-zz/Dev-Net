@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://sale123:sale123@MERN.p10bh.mongodb.net/dev-net?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "dd8322ebd8c14cbb4708",
-  "githubToken": "950a40f1e907b649db1bc390e0b609a4e35359a9"
-}
