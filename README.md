@@ -1,4 +1,4 @@
-# DEV-net
+# Dev-Net
 
 Or developers network, is social media app for developers.
 Users can register and login, make profiles, update them,
